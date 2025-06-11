@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 30px;
+  background-color: #f1f1f1;
+}
+
+#data-box {
+  font-size: 18px;
+  margin-top: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
