@@ -49,7 +49,7 @@ def main():
     battery_kwh = info['battery_capacity_kWh']
     soc = (battery_kwh / Q_available) * 100
 
-    soc_needed = 100 - soc
+    soc_needed = 80 - soc
     energy_needed = (soc_needed / 100) * Q_available
     hours_needed = energy_needed / I_charge
     slots_needed = round(hours_needed / delta_t)
@@ -83,8 +83,8 @@ def main():
         price = prices[hour]
         load = baseload[hour]
 
-        if soc >= 100:
-            print(f" {time_label} SOC reached 100%. Done.")
+        if soc >= 80:
+            print(f" {time_label} SOC reached 80%. Done.")
             break
 
         if hour in chosen_hours:
